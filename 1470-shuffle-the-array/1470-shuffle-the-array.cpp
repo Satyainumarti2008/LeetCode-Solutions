@@ -5,10 +5,8 @@ public:
         int l=0;
         int r=n;
         while(r<=nums.size()-1){
-            a.push_back(nums[l]);
-            a.push_back(nums[r]);
-            l++;
-            r++;
+            a.push_back(nums[l++]);
+            a.push_back(nums[r++]);
         }
         return a;
     }
