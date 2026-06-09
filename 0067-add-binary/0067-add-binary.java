@@ -62,7 +62,7 @@ class Solution {
             j-=1;
         }
         if(carry==1)
-        s+=carry;
+            s+=carry;
         String o=new StringBuilder(s).reverse().toString();
         return o;
     }
