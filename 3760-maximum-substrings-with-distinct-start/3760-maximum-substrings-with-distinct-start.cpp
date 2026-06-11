@@ -6,10 +6,10 @@ public:
         for(int i=0;i<s.length();i++){
             a[s[i]]++;
         }
-        // for(auto it:a){
-        //     if(it.second>0)
-        //         c++;
-        // }
-        return a.size();
+        for(auto it:a){
+            if(it.second>0)
+                c++;
+        }
+        return c;
     }
 };
