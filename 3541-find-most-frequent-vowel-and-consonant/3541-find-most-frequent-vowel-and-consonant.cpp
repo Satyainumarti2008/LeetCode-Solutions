@@ -1,20 +1,20 @@
 class Solution {
 public:
     int maxFreqSum(string s) {
-        unordered_map<char,int>a;
+        unordered_map<char,int>mp;
         for(auto it:s){
-            a[it]++;
+            mp[it]++;
         }
-        int max1=0;
-        int max2=0;
-        for(auto it:a){
+        int maxVow=0;
+        int maxCon=0;
+        for(auto it:mp){
             if(it.first=='a'||it.first=='e'||it.first=='i'||it.first=='o'||it.first=='u'){
-                max1=max(max1,it.second);
+                maxVow=max(maxVow,it.second);
             }
             else{
-                max2=max(max2,it.second);
+                maxCon=max(maxCon,it.second);
             }
         }
-        return max1+max2;
+        return maxVow+maxCon;
     }
 };
