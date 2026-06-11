@@ -2,8 +2,8 @@ class Solution {
 public:
     int maxFreqSum(string s) {
         unordered_map<char,int>a;
-        for(int i=0;i<s.length();i++){
-            a[s[i]]++;
+        for(auto it:s){
+            a[it]++;
         }
         int max1=0;
         int max2=0;
