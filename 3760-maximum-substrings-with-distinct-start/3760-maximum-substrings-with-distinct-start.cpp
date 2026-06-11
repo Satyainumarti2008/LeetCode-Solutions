@@ -7,7 +7,6 @@ public:
             a[s[i]]++;
         }
         for(auto it:a){
-            if(it.second>0)
                 c++;
         }
         return c;
