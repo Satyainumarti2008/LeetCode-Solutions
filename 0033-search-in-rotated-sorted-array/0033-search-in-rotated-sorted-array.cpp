@@ -19,8 +19,8 @@ public:
                 r=mid-1;
         }
        }
-        if(nums[nums.size()-1]==target)
-            return nums.size()-1;
+        // if(nums[nums.size()-1]==target)
+        //     return nums.size()-1;
        return -1;
     }
 };
