@@ -3,8 +3,6 @@ class Solution {
         int c=0;
         for(int i=0;i<n.length();i++){
             c=Math.max(c,n.charAt(i)-'0');
-            if(c==9)
-                break;
         }
         return c;
     }
