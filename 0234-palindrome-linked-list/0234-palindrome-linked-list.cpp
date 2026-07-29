@@ -21,6 +21,8 @@ public:
         return prev;
     }
     bool isPalindrome(ListNode* head) {
+        if(head==nullptr||head->next==nullptr)
+            return 1;
         ListNode d(0);
         ListNode* ans=&(d);
         ListNode* curr=head;
