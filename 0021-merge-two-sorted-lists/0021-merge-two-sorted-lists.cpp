@@ -42,10 +42,6 @@ public:
     }
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         ListNode *ans=new ListNode();
-        if(list1==nullptr)
-            return list2;
-        if(list2==nullptr)
-            return list1;
         merge(ans,list1,list2);
         return ans->next;
     }
