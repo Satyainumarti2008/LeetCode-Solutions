@@ -17,11 +17,12 @@ public:
         while(curr1&&curr1->next){
             int v=INT_MIN;
             int a=curr1->val,b=curr1->next->val;
-            for(int i=1;i<=min(a,b);i++){
-                if(a%i==0&&b%i==0)
-                    v=max(v,i);
+            while(b!=0){
+                int temp=b;
+                b=a%b;
+                a=temp;
             }
-            ListNode* t=new ListNode(v);
+            ListNode* t=new ListNode(a);
             curr1->next=t;
             t->next=curr2;
             curr1=curr2;
