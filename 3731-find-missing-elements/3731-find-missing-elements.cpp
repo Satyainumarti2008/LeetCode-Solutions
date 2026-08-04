@@ -3,8 +3,8 @@ public:
     vector<int> findMissingElements(vector<int>& nums) {
         unordered_map<int,int>mp;
         vector<int>v;
-        int mins=10000000;
-        int maxs=-1;
+        int mins=INT_MAX;
+        int maxs=0;
         for(int i=0;i<nums.size();i++){
             mp[nums[i]]=nums[i];
             if(mins>nums[i])
