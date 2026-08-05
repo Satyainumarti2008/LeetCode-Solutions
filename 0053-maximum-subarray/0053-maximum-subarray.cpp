@@ -4,9 +4,6 @@ public:
         if(index==0){
             return nums[0];
         }
-        if(index>nums.size()){
-            return INT_MIN;
-        }
         if(dp[index]!=-1){
             return dp[index];
         }
