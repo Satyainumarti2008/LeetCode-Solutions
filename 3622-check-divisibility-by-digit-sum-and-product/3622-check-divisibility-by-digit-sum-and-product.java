@@ -11,7 +11,6 @@ class Solution {
         if(n % sum == 0){
             return true;
         }
-        return false
-        ;
+        return false;
     }
 }
