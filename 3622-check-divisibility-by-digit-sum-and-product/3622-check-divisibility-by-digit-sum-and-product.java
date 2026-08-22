@@ -3,9 +3,8 @@ class Solution {
         int sum = 0, mul = 1;
         int temp = n;
         while(temp > 0){
-            int t = temp % 10;
-            sum += t;
-            mul *= t;
+            sum += temp % 10;
+            mul *= temp % 10;
             temp /= 10;
         }
         sum += mul;
