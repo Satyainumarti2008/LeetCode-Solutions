@@ -1,25 +1,19 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
-        vector<int>s;
-        unordered_map<int,int>mp1,mp2;
-        for(int i=0;i<matrix.size();i++)
-        {
-            for(int j=0;j<matrix[i].size();j++){
-                if(matrix[i][j]==0){
-                    mp1[i]=i;
-                    mp2[j]=j;
+        unordered_set<int> s1, s2;
+        for(int i = 0; i < matrix.size(); i++){
+            for(int j = 0; j < matrix[0].size(); j++){
+                if(matrix[i][j] == 0){
+                    s1.insert(i);
+                    s2.insert(j);
                 }
             }
         }
-        for(int i=0;i<matrix.size();i++)
-        {
-            for(int j=0;j<matrix[i].size();j++){
-                if(mp1.find(i)!=mp1.end()){
-                    matrix[i][j]=0;
-                }
-                if(mp2.find(j)!=mp2.end()){
-                    matrix[i][j]=0;
+        for(int i = 0; i < matrix.size(); i++){
+            for(int j = 0; j < matrix[0].size(); j++){
+                if(s1.count(i) || s2.count(j)){
+                    matrix[i][j] = 0;
                 }
             }
         }
