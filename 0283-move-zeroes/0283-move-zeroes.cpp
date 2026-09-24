@@ -8,8 +8,8 @@ public:
                 nums[j++] = nums[i];
             }
         }
-        while(j<n){
-            nums[j++]=0;
+        while(j < n){
+            nums[j++] = 0;
         }
     }
 };
